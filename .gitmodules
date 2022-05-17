@@ -1,0 +1,3 @@
+[submodule "MainProject/submoduleTest1"]
+	path = MainProject/submoduleTest1
+	url = https://github.com/emiraki/submoduleTest1
