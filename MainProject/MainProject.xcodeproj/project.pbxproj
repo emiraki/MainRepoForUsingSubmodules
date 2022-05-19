@@ -16,6 +16,9 @@
 		AC2623642833D23B007F5605 /* MainProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2623632833D23B007F5605 /* MainProjectTests.swift */; };
 		AC26236E2833D23B007F5605 /* MainProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26236D2833D23B007F5605 /* MainProjectUITests.swift */; };
 		AC2623702833D23B007F5605 /* MainProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26236F2833D23B007F5605 /* MainProjectUITestsLaunchTests.swift */; };
+		AC5C25C82835AC8600845867 /* TestPackage in Frameworks */ = {isa = PBXBuildFile; productRef = AC5C25C72835AC8600845867 /* TestPackage */; };
+		AC5C25FB2836F5DC00845867 /* TestFrameworkSubmodule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC5C25F82836F59100845867 /* TestFrameworkSubmodule.framework */; };
+		AC5C25FC2836F5DC00845867 /* TestFrameworkSubmodule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC5C25F82836F59100845867 /* TestFrameworkSubmodule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +36,35 @@
 			remoteGlobalIDString = AC2623482833D23A007F5605;
 			remoteInfo = MainProject;
 		};
+		AC5C25F72836F59100845867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC5C25F22836F59100845867 /* TestFrameworkSubmodule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC5C25D32836F3FA00845867;
+			remoteInfo = TestFrameworkSubmodule;
+		};
+		AC5C25F92836F59100845867 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC5C25F22836F59100845867 /* TestFrameworkSubmodule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AC5C25DD2836F3FB00845867;
+			remoteInfo = TestFrameworkSubmoduleTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AC5C25FD2836F5DC00845867 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AC5C25FC2836F5DC00845867 /* TestFrameworkSubmodule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		AC2623492833D23A007F5605 /* MainProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +80,8 @@
 		AC2623692833D23B007F5605 /* MainProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC26236D2833D23B007F5605 /* MainProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProjectUITests.swift; sourceTree = "<group>"; };
 		AC26236F2833D23B007F5605 /* MainProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC5C25C52835AC2300845867 /* TestPackage */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = TestPackage; path = ../../MyPackageTest2/TestPackage; sourceTree = "<group>"; };
+		AC5C25F22836F59100845867 /* TestFrameworkSubmodule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TestFrameworkSubmodule.xcodeproj; path = TestFrameworkSubmodule/TestFrameworkSubmodule.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC5C25FB2836F5DC00845867 /* TestFrameworkSubmodule.framework in Frameworks */,
+				AC5C25C82835AC8600845867 /* TestPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,10 +114,13 @@
 		AC2623402833D23A007F5605 = {
 			isa = PBXGroup;
 			children = (
+				AC5C25F12836F55A00845867 /* Submodules */,
+				AC5C25C52835AC2300845867 /* TestPackage */,
 				AC26234B2833D23A007F5605 /* MainProject */,
 				AC2623622833D23B007F5605 /* MainProjectTests */,
 				AC26236C2833D23B007F5605 /* MainProjectUITests */,
 				AC26234A2833D23A007F5605 /* Products */,
+				AC5C25C62835AC8600845867 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +165,30 @@
 			path = MainProjectUITests;
 			sourceTree = "<group>";
 		};
+		AC5C25C62835AC8600845867 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC5C25F12836F55A00845867 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C25F22836F59100845867 /* TestFrameworkSubmodule.xcodeproj */,
+			);
+			path = Submodules;
+			sourceTree = "<group>";
+		};
+		AC5C25F32836F59100845867 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC5C25F82836F59100845867 /* TestFrameworkSubmodule.framework */,
+				AC5C25FA2836F59100845867 /* TestFrameworkSubmoduleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,12 +199,16 @@
 				AC2623452833D23A007F5605 /* Sources */,
 				AC2623462833D23A007F5605 /* Frameworks */,
 				AC2623472833D23A007F5605 /* Resources */,
+				AC5C25FD2836F5DC00845867 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = MainProject;
+			packageProductDependencies = (
+				AC5C25C72835AC8600845867 /* TestPackage */,
+			);
 			productName = MainProject;
 			productReference = AC2623492833D23A007F5605 /* MainProject.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +283,12 @@
 			mainGroup = AC2623402833D23A007F5605;
 			productRefGroup = AC26234A2833D23A007F5605 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AC5C25F32836F59100845867 /* Products */;
+					ProjectRef = AC5C25F22836F59100845867 /* TestFrameworkSubmodule.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AC2623482833D23A007F5605 /* MainProject */,
@@ -225,6 +297,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AC5C25F82836F59100845867 /* TestFrameworkSubmodule.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TestFrameworkSubmodule.framework;
+			remoteRef = AC5C25F72836F59100845867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC5C25FA2836F59100845867 /* TestFrameworkSubmoduleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TestFrameworkSubmoduleTests.xctest;
+			remoteRef = AC5C25F92836F59100845867 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AC2623472833D23A007F5605 /* Resources */ = {
@@ -596,6 +685,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC5C25C72835AC8600845867 /* TestPackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = TestPackage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC2623412833D23A007F5605 /* Project object */;
 }

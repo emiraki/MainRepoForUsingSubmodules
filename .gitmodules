@@ -4,3 +4,6 @@
 [submodule "submoduleTest2"]
 	path = submoduleTest2
 	url = https://github.com/emiraki/submoduleTest2
+[submodule "MainProject/Submodules/TestFrameworkSubmodule"]
+	path = MainProject/Submodules/TestFrameworkSubmodule
+	url = https://github.com/emiraki/TestFrameworkSubmodule.git
